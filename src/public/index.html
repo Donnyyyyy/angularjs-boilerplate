@@ -1,0 +1,33 @@
+<!doctype html>
+<html ng-app="project" lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<base href="/">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title ng-bind="'Project | ' + $root.title">Boilerplate</title>
+
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="icon" type="image/png" href="images/favicon.png" />
+	<link rel="shortcut icon" href="images/favicon.ico">
+
+	<!--[if IE]>
+		<link rel="shortcut icon" href="favicon.ico">
+	<![endif]-->
+</head>
+
+<body class="main-wrapper">
+		<div class="page-container">
+			<ex-navbar></ex-navbar>
+			<ng-view></ng-view>
+			<ex-footer></ex-footer>
+			<ex-error-modal></ex-error-modal>
+		</div>
+		
+	<script src="js/plugins/schema.js"></script>
+	<script src="js/plugins/graphql-client.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<div
+    class="modal fade"
+    id="{{ctrl.error}}-modal"
+    tabindex="-1" role="dialog"
+    aria-hidden="{{ctrl.modal === ctrl.id}}"
+    ng-class="{'show': (ctrl.modal === ctrl.id) && !ctrl.closing}"
+    style="display: {{(ctrl.modal === ctrl.id) ? 'block' : 'none'}}"
+>
+    <div class="modal-dialog achive-modal" role="document" ng-click="ctrl.close()">
+        <div class="modal-content widget" ng-click="$event.stopPropagation()">
+            <div class="modal-header widget-header achive-header">
+                <h5 class="achive-header__title">
+                    Ошибка :(
+                </h5>
+                <button class="modal-close__btn" type="button" data-dismiss="modal" aria-label="Close" ng-click="ctrl.close()">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 377 376.1">
+                        <path d="M-.03 347.048L347.017.003l28.99 28.99L28.963 376.04z" />
+                        <path d="M30.01-.023l347.043 347.045-28.99 28.99L1.017 28.97z" />
+                    </svg>
+                </button>
+            </div>
+            <div class="modal-body widget-wrapper">
+                <p>
+                    {{ctrl.message}}
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

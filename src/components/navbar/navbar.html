@@ -1,0 +1,15 @@
+<div class="main-navbar">
+
+  <nav class="nav-links">
+    <a
+      class="nav-links__item"
+      ng-repeat="tab in ctrl.tabs"
+      ng-class="{'active': tab.name === ctrl.activeTab}"
+      href="{{tab.link}}"
+      ng-click="ctrl.activate(tab.name)"
+    >
+      {{tab.name}} |
+    </a>
+    <a class="nav-links__item" ng-click="ctrl.logout();">Выйти</a>
+  </nav>
+</div>
