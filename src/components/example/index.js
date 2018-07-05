@@ -6,8 +6,6 @@ export default class Example {
   static get name() { return 'exExample'; }
 
   constructor($scope, $store) {
-    console.log('I am example!');
-    
     this.$store = $store;
     this.$scope = $scope;
     this.bind();
